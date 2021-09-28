@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Order summary card</title>
+
+  
+
+  
+</head>
+<body>
+
+<!-- 1. Primero creas un contenedor div con el nombre de clase main__card la cual sera la caja contenedora de todos los elementos de la tarjeta-->
+
+<!-- 2. Luego creas dos contendores div, uno para la imagen a la que le le puse el nombre de clase  main_imagecontainer, dentro de este creas el elemento img con la clase card__imade y en el otro contenedor
+le puse el nombre de clase card__content, este contenedor contiene todo los elementos descriptivos, asi como los planes que el servicio ofrece, y los botones para pagar o cancelar la orden-->
+
+<!--3. Dentro de card-content pones los elementos de h1 para el titulo de order summary y el parrafo que describe lo que ofrece el servicio, luego dentro de este contenedor llamado 
+       con la clase nombre card-box y los botones pay y cancel-->
+<!--4. Dentro de Cardbox creas dos contenedores uno que se llamara music__icon donde se insertara el icono de música
+       y otro contenedor con el nombre clase de box__plan  donde insertaremos el contenido de plan annual y el precio por año y el link boton de change-->
+<!--5. El contenedor con el nombre clase atribuition va hasta el final.-->
+
+
+  <div class="main__card">
+
+    <div class="main__imagecontainer">
+      <img src="./images/illustration-hero.svg" alt="" class="card__image">
+    </div>
+    <div class="card__content">
+
+      <h1>Order Summary</h1>
+      <p>You can now listen to millions of songs,<br> audiobooks, and podcasts on any 
+        device <br>anywhere you like!</p>
+
+      <div class="card__box">
+
+        <div class="music__icon">
+
+          <img src="/images/icon-music.svg" alt="">
+
+        </div>
+
+        <div class="box__plan">
+
+          
+            <h2>Annual Plan</h2>
+            <p>$59.99/year</p>
+          
+
+        </div>
+
+        <a href="" class="change">Change</a>
+        
+      </div>
+      <button class="button--pay"><a href="#" class="pay">Proceed to Payment</a></button>
+      <button class="button--cancel"><a href="#" class="cancel">Cancel Order</a></button>
+    </div>    
+
+
+  </div>
+
+  
+
+
+  
+
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Jaime Rueda</a>.
+  </div>
+</body>
+</html>

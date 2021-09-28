@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap'); /* Se importa la fuente que se utilizara para la aplicación*/
+
+
+/* Se crean las variables que contienen los colores que representan nuestro servicio*/
+:root{
+
+    --paleblue: hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+
+    --verypaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+    
+
+
+}
+
+/* Reseteamos los estilos con el selectro universal quitando el padding y el margen*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Se establece el font-size al 62.5% esto con el objetivo de poder poner con la medida rem el tamaño exacto de las fuentes*/
+
+html{
+    font-size: 62.5%;
+}
+
+/* En el elemento body aplicamos el display flex, con la dirección en modo columna, y aliniamos los items al centro*/
+/* cambiamos el background de la etiqueta body con la propiedad background-image y 
+buscamos el background svg dentro de nuestra carpeta de imagenes, usamos la porpuedad background-size contain y el background repeat para que no se repita  la imagen*/
+/*Ajustamos la posicion de background de acuerdo con el diseño original con background-position  con los valores center y top*/
+/* Establecemos un color de background en este caso --paleblue*/
+/* y establecemos el font family que en este caso es Red Hat Display*/
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: var(--paleblue);
+    font-family:'Red Hat Display', sans-serif;    
+    
+}
+
+/*Ahora ajustamos el contenedor de la tarejeta principal, estableciendo un margen superior del 8%, establecemos un width maximo de 450px, para que este no crezca mas de ese tope;
+le ponemos un height de 670px, un border-radious de 20px para tener redondeada las esquinas un poco; el background color blanco, y le aplicamos sombras con box-shadow */
+.main__card{
+
+    margin-top: 8%;
+    max-width: 450px;
+    height: 670px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 25px 26px -7px #B5BDF2;
+
+}
+
+/* Le aplicamos border radious a las esquinas superiores de la imagen de la tarjeta y ajustamos la imagen utilizando
+background-size cover*/
+
+
+.card__image{
+    border-radius: 20px 20px 0 0;
+    background-size: cover;
+}
+
+/* Al contenedor  .card__content le damos una altura de 453 px, el tipo de display sera flex, flex-direction column, para justar el contenido de forma vertical
+justificamos el contenido con space around para separar los elementos un poco y alineamos los elementos con align-items al centro.*/
+
+.card__content{
+   
+    height: 435px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* al titulo de la tarjeta le damos un margen superior de 25 pixeles y le damos un font size de 3.0rem que en este caso sería 30px;*/
+.card__content h1{
+    
+    margin-top: 25px;
+    font-size: 3.0rem;
+}
+/* Al párrafo del contenedor card content le aplicamos también un margen superior de -18 px para subir el elemento un poco de la posición donde se encontraba;
+le ponemos 1.6 rem(16px) de font size, alineamos el texto al centro, le ponesmos el color -desaturatedblue; le ponemso una altura de lineas de 1.6*/
+
+.card__content > p{
+    
+    margin-top: -18px;
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--desaturatedblue);
+    line-height: 1.6;
+}
+
+/* a la cardbox donde se encuentra los planes el icono de musica y el boton de cambio se utilizo un margen-superior de -15px para ajustarlo un poco hacia arriba
+le di un ancho de 310 px, el display flex para ajustar sus elementos de forma horizontal, le di un padding de 20px de alto y bajo y 10 de izquierda y derecha,
+le puse un color varypaleblue y un border radius de 10px en las esquinas. */
+
+.card__box{ 
+    margin-top:-15px;
+    width: 310px;
+    display: flex;
+    padding: 20px 10px;
+    background-color: var(--verypaleblue);  
+    border-radius: 10px;
+}
+
+/* Al ícono de música le puse un margen izquierdo de 10px para que se separara un poco del borde izquierdo de la caja*/
+
+.music__icon{
+
+    margin-left: 10px;;
+
+}
+
+/* Al contenedor box-plan le puse 20px de margen izquierdo para separarlo del icono de música*/
+
+.box__plan{
+
+    margin-left: 20px;
+    
+}
+
+/* Al parrafo del contenedor box-plan, le puse un margin top de 5px para separar el parrafo del elemento h1*/
+
+.box__plan > p {
+
+    margin-top: 5px;
+    font-size: 1.4rem;
+    color: var(--desaturatedblue);
+
+} 
+
+/* Al link change del card__box le puse un margen izquierdo de 95px para separarlo del borde izquierdo de box plan, le puse un line-height de 4,
+font-size de 1.2rem o 12px, font-weight bold y color brightblue, y use los pseudolementos hover y active para visualizar al inreaccion al presionar change.*/
+.card__box > a{
+
+    margin-left: 95px;
+    line-height: 4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--brightblue);
+}
+.change:hover{
+
+    color:#7643d4;
+
+}
+
+.change:active{
+
+    color: rgb(30, 210, 201);
+
+}
+
+
+/* Al botón de pay le quite el borde con border: none, el background color es brightblue, el padding de 15px de alto y bajo y 10px de izquierda y derecha; 
+un ancho de 350px, un border radious de 10px, font-family red hat display, el peso de fuente bold, y le aplique box shadow y un color como moradito*/
+
+.button--pay {
+
+    
+    border:none;
+    background-color: var(--brightblue);
+    padding: 15px 10px;
+    width: 330px;
+    border-radius: 10px;
+    font-family:'Red Hat Display', sans-serif;  
+    font-weight: bold;
+    box-shadow: 0px 25px 26px -7px #CCC9FF;
+
+
+}
+/* Al boton cancel le aplique un  margen superior de -20 para subirlo un poco y ponerlo cerca del boton pay, le quite el borde y el background, agregue padding
+de 15px alto y bajo, 10px izquierdo y derecho; ancho de 330px; font-family 'Red Hat Display', peso de fuente bold.*/
+
+.button--cancel  {
+
+    margin-top: -20px;
+    border: none;
+    background:none;
+    padding: 15px 10px;
+    width: 330px;
+    font-family:'Red Hat Display', sans-serif;  
+    font-weight: bold;
+   
+    
+}
+
+/* a pay le quite la línea que subraya las letras y le puse el color blanco, y agregue las pseudoclases hover y active para visualizar la interacción con los botónes*/
+.pay{
+
+    text-decoration: none;
+    color: white;
+}
+
+.button--pay:hover {
+
+    background-color:#7643d4;
+
+}
+
+.button--pay:active{
+
+    background-color: rgb(30, 210, 201);
+
+}
+
+.cancel{
+
+    text-decoration: none;
+    color: var(--desaturatedblue);
+}
+
+
+.cancel:hover{
+
+    color:#7643d4;
+
+}
+
+.cancel:active{
+
+    color: rgb(30, 210, 201);
+
+}
+
+/* separé el contenedor de attribution de la tarjeta utilizando un margen superior de 100px*/
+
+.attribution{
+
+    margin-top: 100px;
+
+}
+
